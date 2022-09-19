@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1d1e20;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1d1e20;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1d1e20;
+}
+
+body {
+    user-select: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(18, 18, 18);
+    font-family: 'Lato', sans-serif;
+}
+
+.main {
+    margin-left: 6%;
+    margin-top: 1%;
+}
+
+img {
+    vertical-align: middle;
+}
+
+header {
+    text-align: center;
+    margin-top: 10px; 
+}
+
+p {
+    background-color: rgb(43, 43, 43);
+    border-radius: 10px;
+    width: 70%;
+    height: 70%;
+    padding: 10px;
+    margin-right: 20%;
+}
+
+.lolxd {
+    background-color: rgb(43, 43, 43);
+    border-radius: 10px;
+    width: 70%;
+    height: 70%;
+    padding: 10px;
+    margin-right: 20%;
+}
+
+a {
+    color: #15a3a5;
+    text-decoration: none;
+}
+
+.t1 {
+    margin: 10px;
+}
+
+.svg {
+    padding: 15px;
+}
+
+.svg:hover {
+    background-color: rgba(60, 60, 60, 0.534);
+    border-radius: 10px;
+    transform: scale(1.1);
+}
+
+.title {
+    color: #FFF;
+    text-decoration: underline;
+}
+.bild {
+    border-radius: 10px;
+}
+.copy-allowed {
+    user-select: all;
+}
+
+ga {
+    color: #15a3a5;
+
+}
+input[type=search] {
+    width: 50%;
+    padding: 4px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid rgb(32, 32, 32);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    background-color: #3b3b3b;
+}
+
+input[type=search]:focus {
+    border: 3px solid #555;
+}
+sa {
+    color: #fff;
+    float: right;
+}
