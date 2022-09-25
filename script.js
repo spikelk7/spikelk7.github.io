@@ -2,24 +2,35 @@ const follows = document.getElementById("follows");
 const views = document.getElementById("views");
 const total = document.getElementById("total");
 const partners = document.getElementById("partners");
-const modlookup = document.getElementById("channels");
+const modChannels = document.getElementById("modChannels");
 
 function format(number) {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 
 fetch("https://modlookup.3v.fi/api/user-totals/spikelk7").then(response => response.json()).then(data => {
-    follows.innerText = format(data.follows);
-    views.innerText = format(data.views);
-    total.innerText = format(data.total);
-    partners.innerText = format(data.partners);
+    modlookup.innerHTML =
+    `
+    <div class="modlookup main">
+        <table>
+        <tr>
+            <td>Follow total: <a>${format(data.follows)}</a></td>
+            <td>Views total: <a>${format(data.views)}</a></td>
+        </tr>
+        <tr>
+            <td>Channels: <a>${format(data.total)}</a></td>
+            <td>Partners: <a>${format(data.partners)}</a></td>
+        </tr>
+        </table>
+    </div>
+    `;
 });
 
 fetch("https://modlookup.3v.fi/api/user-v3/spikelk7").then(response => response.json()).then(data => {
     let channels = data.channels.map(res => res);
     let channelsList = "?login=spikelk7";
     for (const channel of channels) {
-        if (channel.followers > 400) {
+        if (channel.followers > 500) {
             channelsList += `%2C${channel.name}`;
         }
     }
@@ -35,7 +46,18 @@ fetch("https://modlookup.3v.fi/api/user-v3/spikelk7").then(response => response.
                 if (channel.roles.isPartner) {
                     badges = `<img style="vertical-align: middle; border-radius: 5px;" src="https://static-cdn.jtvnw.net/badges/v1/d12a2e27-16f6-41d0-ab77-b780518f00a3/3" width="19" height="19"> `
                 }
-                modlookup.innerHTML += `<p><img style="vertical-align: middle; border-radius: 25px; position: relative; right: 4px;" src="${channel.logo}" width="28" height="28">${badges} <span style="vertical-align: middle"><a style="color: ${channel.chatColor};" href="https://www.twitch.tv/${encodeURIComponent(channel.login)}/"target="_blank">${channel.displayName ? channel.displayName : channel.login}</a> ~ ${format(channel.followers)} Follower<sa> Views ~  ${format(channel.profileViewCount)}</sa><br>${islive}</p>`;
+                modChannels.innerHTML += 
+                `
+                    <div class="line">
+                    <img class="logo" src="${channel.logo}">
+                    ${badges}
+                    <a style="color: ${channel.chatColor ? channel.chatColor : "#123456"};" href="https://www.twitch.tv/${encodeURIComponent(channel.login)}/" target="_blank" rel="noopener noreferrer">
+                    <text class="channel-name">${channel.displayName ? channel.displayName : channel.login}</text>
+                    </a>
+                    <i class="followers"> ~${format(channel.followers)}</i>
+                    ${islive}
+                    </div>
+                `;
               
             }
         }

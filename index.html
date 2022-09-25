@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Spike - Main</title>
-    <meta name="author" content="Spike">
+    <title>LsCo - Main</title>
+    <meta name="author" content="LsCo">
     <meta name="description" content="Home">
 
-    <link rel='icon' href='https://cdn.7tv.app/emote/6239577d6cf512e934d3e64a/4x' />
+    <link rel='icon' href='https://cdn.betterttv.net/emote/6228bfe606fd6a9f5be69c39/2x' />
     <link rel="stylesheet" href="./style.css">
 
     <script src="./script.js" defer></script>
@@ -16,35 +16,115 @@
 </head>
 
 <body>
-    <header> <img src="https://cdn.betterttv.net/emote/5c0e1a3c6c146e7be4ff5c0c/3x" width="70" height="70" style="border-radius: 20px;">
-        <h1>Home</h1>
+    <header>
+        <img class="home" src="./img/spike.png">
     </header>
-    <h2 class="main">About me</h2>
-    <p class="main"><img width="27" height="27" src="https://cdn.betterttv.net/emote/60d5da348ed8b373e4219619/3x"
-            style="padding-right: 4px;"> 𝐒𝐩𝐢𝐤𝐞 -
-        𝐁𝐖 - 𝐃𝐞𝐮𝐭𝐬𝐜𝐡</p>
-    <p class="main"><img width="27" height="27" src="https://cdn.betterttv.net/emote/605dfabd7493072efdeb4f5e/3x"
-            style="padding-right: 4px;">#mastsau4ever</p>
-    <p class="main"><img width="27" height="27" src="https://static-cdn.jtvnw.net/emoticons/v2/81274/default/dark/3.0" style="padding-right: 4px;">Twitch Moderator</p>
-    <h2 class="main">Moderation</h2>
-    <p class="main"><a href="https://chatty.github.io/" target="_blank">Chatty</a> for <img
-            src="https://cdn.betterttv.net/emote/5ec068a99af1ea16863b2fc7/3x" width="27" height="27"></p>
-    <p class="main"><a href="https://chatty.github.io/" target="_blank">Chatterino-Nightly</a> for <img
-            src="https://cdn.7tv.app/emote/6105de63a32b8c587a52a21f/4x" width="27" height="27"></p>
-    <h2 class="main"><a
-            onclick="window.open('https:\/\/modlookup.3v.fi/u/spikelk7','popup','width=750,height=750');">ModLookUp </a>
-    </h2>
-    <div class="main">
-        <p>Follow total: <a id="follows"></a> - Views total: <a id="views"></a></p>
-        <p>Channels: <a id="total"></a> - Partners: <a id="partners"></a></p>
-    </div>
-    <h2 class="main">Chats which I moderate
-    </h2>
-    <div class="main">
-        <div id="channels"></div>
-    </div>
-    <p class="main">
-        Joined my Discord Server <a href="https://discord.gg/6GcAWfSesj" target="_blank">https://discord.gg/6GcAWfSesj</a>
+    <main>
+        <h2>
+            About me
+        </h2>
+        <div class="line main">
+            <table>
+                <tr>
+                    <td>
+                        <div class="spacer main">
+                            <img class="emote" src="https://cdn.betterttv.net/emote/60d5da348ed8b373e4219619/3x">
+                        </div>
+                    </td>
+                    <td class="space">
+                        <text>
+                            Spike - BW - German
+                        </text>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="line main">
+            <table>
+                <tr>
+                    <td>
+                        <div class="spacer main">
+                            <img class="emote" src="https://cdn.frankerfacez.com/emoticon/288800/4">
+                        </div>
+                    </td>
+                    <td class="space">
+                        <text>
+                            #mastsau4ever
+                        </text>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="line main">
+            <table>
+                <tr>
+                    <td>
+                        <div class="spacer main">
+                            <img class="emote" src="https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/2">
+                        </div>
+                    </td>
+                    <td class="space">
+                        <text>
+                            Twitch Moderator
+                        </text>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <h2>
+            Tools
+        </h2>
+        <div class="line main">
+            <table>
+                <tr>
+                    <td>
+                        <div class="spacer main">
+                            <img class="emote" src="./img/chatty.png">
+                        </div>
+                    </td>
+                    <td class="space">
+                        <text>
+                            <a href="https://chatty.github.io" target="_blank"
+                                rel="noopener noreferrer">Chatty</a>
+                        </text>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="line main">
+            <table>
+                <tr>
+                    <td>
+                        <div class="spacer main">
+                            <img class="emote" src="./img/chatterino.png">
+                        </div>
+                    </td>
+                    <td class="space">
+                        <text>
+                            <a href="https://github.com/SevenTV/chatterino7/releases/tag/nightly-build" target="_blank"
+                                rel="noopener noreferrer">Chatterino-Nightly</a>
+                        </text>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <h2>
+            <a href="https://modlookup.3v.fi/u/lsco" target="_blank" rel="noopener noreferrer">ModLookUp</a>
+        </h2>
+        <div id="modlookup" class="main"></div>
+        <h2>
+            The channels I moderate:
+        </h2>
+        <div id="modChannels" class="main">
+        </div>
+        <h2>
+            Social Media
+        </h2>
+        <div class="main">
+            <text class="social-media"><a href="https://www.twitch.tv/spikelk7/" target="_blank" rel="noopener noreferrer">Twitch</a></text>
+            <text class="social-media"><a href="https://discord.gg/B4WkUBmrse" target="_blank" rel="noopener noreferrer">Discord</a></text>
+            <text class="social-media"><a href="https://www.instagram.com/spikelk7/" target="_blank" rel="noopener noreferrer">Instagram</a></text>
+        </div>
     </main>
 </body>
 

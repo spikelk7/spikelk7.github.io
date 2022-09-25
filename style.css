@@ -16,20 +16,25 @@
     background: #1d1e20;
 }
 
+* {
+    vertical-align: middle;
+
+    scroll-behavior: smooth;
+    overflow-y: visible;
+    scrollbar-width: thin;
+}
+
+text {
+    align-items: center;
+    vertical-align: baseline;
+}
+
 body {
     user-select: none;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     background-color: rgb(18, 18, 18);
+    animation: color 3s infinite;
     font-family: 'Lato', sans-serif;
-}
-
-.main {
-    margin-left: 6%;
-    margin-top: 1%;
-}
-
-img {
-    vertical-align: middle;
 }
 
 header {
@@ -37,74 +42,90 @@ header {
     margin-top: 10px; 
 }
 
-p {
-    background-color: rgb(43, 43, 43);
-    border-radius: 10px;
-    width: 70%;
-    height: 70%;
-    padding: 10px;
-    margin-right: 20%;
+header img.home {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    margin-left: 6%;
+    margin-top: 1%;
 }
 
-.lolxd {
-    background-color: rgb(43, 43, 43);
+main {
+    margin-left: 6%;
+    margin-top: 1%;
+}
+
+main div.line {
+    display: block;
+    background-color: #1a1c1d;
     border-radius: 10px;
-    width: 70%;
-    height: 70%;
     padding: 10px;
     margin-right: 20%;
+    margin-top: 10px;
 }
 
 a {
+    display: inline;
     color: #15a3a5;
     text-decoration: none;
+    vertical-align: unset;
 }
 
-.t1 {
+main div img.media {
+    padding: 10px;
+    margin: 15px;
+}
+
+main div img.media:hover {
+    background-color: #3c3c3c88;
+    border-radius: 10px;
+    transform: scale(1.2);
+}
+
+main img.emote {
+    width: 28px;
+}
+
+main div a.game {
+    color: #000;
+}
+
+main div img.logo {
+    border-radius: 25px;
+    width: 30px;
+}
+
+main div img.badge {
+    border-radius: 4px;
+    width: 18px;
+}
+
+main div i.followers {
+    float: right;
+}
+
+main div.modlookup table {
+    width: 400px;
+}
+
+main div.main {
+    margin-left: 15px;
+}
+
+main div .spacer {
+    display: inline-block;
+    width: 40px;
+    height: 27px;
+}
+
+main div .space {
+    width: 100%;
+}
+
+main div.main text.social-media {
     margin: 10px;
 }
 
-.svg {
-    padding: 15px;
-}
-
-.svg:hover {
-    background-color: rgba(60, 60, 60, 0.534);
-    border-radius: 10px;
-    transform: scale(1.1);
-}
-
-.title {
-    color: #FFF;
-    text-decoration: underline;
-}
-.bild {
-    border-radius: 10px;
-}
-.copy-allowed {
-    user-select: all;
-}
-
-ga {
-    color: #15a3a5;
-
-}
-input[type=search] {
-    width: 50%;
-    padding: 4px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 3px solid rgb(32, 32, 32);
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-    background-color: #3b3b3b;
-}
-
-input[type=search]:focus {
-    border: 3px solid #555;
-}
-sa {
-    color: #fff;
-    float: right;
+main div.line text.channel-name {
+    margin: 10px;
 }
