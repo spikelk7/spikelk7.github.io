@@ -39,7 +39,7 @@ body {
 
 header {
     text-align: center;
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 header img.home {
@@ -128,4 +128,8 @@ main div.main text.social-media {
 
 main div.line text.channel-name {
     margin: 10px;
+}
+
+.lol {
+    size: 40 !important;
 }
