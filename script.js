@@ -30,7 +30,7 @@ fetch("https://modlookup.3v.fi/api/user-v3/spikelk7").then(response => response.
     let channels = data.channels.map(res => res);
     let channelsList = "?login=spikelk7";
     for (const channel of channels) {
-        if (channel.followers > 800) {
+        if (channel.followers > 2000) {
             channelsList += `%2C${channel.name}`;
         }
     }
